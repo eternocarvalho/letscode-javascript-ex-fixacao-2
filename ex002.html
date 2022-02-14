@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Fixação</title>
+</head>
+<body>
+
+    <script>
+
+
+        // 1 - Média e Produto
+        alert("Exercício 1")
+
+        let x = parseInt(prompt("Insira um número inteiro"));
+        let y = parseInt(prompt("Insira um número inteiro"));
+
+        function calcula_media(x,y) {
+            return (x+y)/2;
+        }
+        console.log(calcula_media(x,y));
+
+        function calcula_produto(x,y) {
+            return x*y;
+        }
+        console.log(calcula_produto(x,y));
+
+        // 2 - Média Ponderada
+        let peso_prova_1 = parseInt(prompt("Insira o peso da primeira prova"));
+        let peso_prova_2 = parseInt(prompt("Insira o peso da segunda prova"));
+        let matricula_aluno = parseInt(prompt("Insira a matrícula do aluno"));
+        let nota_prova_1 = parseFloat(prompt("Insira a nota da primeira prova"));
+        let nota_prova_2 = parseFloat(prompt("Insira a nota da segunda prova"));
+
+        function calcula_media_ponderada (nota_prova_1, nota_prova_2, peso_prova_1, peso_prova_2) {
+            return ((nota_prova_1 * peso_prova_1) + (nota_prova_2 * peso_prova_2)) / (peso_prova_1 + peso_prova_2);
+        }
+        console.log (matricula_aluno);
+        console.log (calcula_media_ponderada (nota_prova_1, nota_prova_2, peso_prova_1, peso_prova_2));
+
+        // 3 - Média Ponderada
+        let peso_1 = parseInt(prompt("Insira o peso da primeira prova"));
+        let peso_2 = parseInt(prompt("Insira o peso da segunda prova"));
+        let matricula_do_aluno = parseInt(prompt("Insira a matrícula do aluno"));
+        let nota_1 = parseFloat(prompt("Insira a nota da primeira prova"));
+        let nota_2 = parseFloat(prompt("Insira a nota da segunda prova"));
+
+        function calcula_media_ponderada (nota_1, nota_2, peso_1, peso_2) {
+            return (calcula_produto(nota_1, peso_1) + calcula_produto(nota_2, peso_2)) / (peso_1 + peso_2);
+        }
+        console.log (calcula_media_ponderada (nota_1, nota_2, peso_1, peso_2));
+
+
+        // 4 - Média Ponderada 2 Alunos
+        let peso_nota_1 = parseInt(prompt("Insira o peso da primeira prova"));
+        let peso_nota_2 = parseInt(prompt("Insira o peso da segunda prova"));
+        let matricula_aluno_1 = parseInt(prompt("Insira a matrícula do aluno"));
+        let nota_1_aluno_1 = parseFloat(prompt("Insira a nota da primeira prova"));
+        let nota_2_aluno_1 = parseFloat(prompt("Insira a nota da segunda prova"));
+
+        function calcula_media_ponderada_al_1 (nota_1_aluno_1, nota_2_aluno_1, peso_nota_1, peso_nota_2) {
+            return (calcula_produto(nota_1_aluno_1, peso_nota_1) + calcula_produto(nota_2_aluno_1, peso_nota_2)) / (peso_nota_1 + peso_nota_2);
+        }
+        console.log (calcula_media_ponderada (nota_1_aluno_1, nota_2_aluno_1, peso_nota_1, peso_nota_2));
+
+        let nota_1_aluno_2 = parseFloat(prompt("Insira a nota da primeira prova"));
+        let nota_2_aluno_2 = parseFloat(prompt("Insira a nota da segunda prova"));
+
+        function calcula_media_ponderada_al_1 (nota_1_aluno_2, nota_2_aluno_2, peso_nota_1, peso_nota_2) {
+            return (calcula_produto(nota_1_aluno_2, peso_nota_1) + calcula_produto(nota_2_aluno_2, peso_nota_2)) / (peso_nota_1 + peso_nota_2);
+        }
+        console.log (calcula_media_ponderada (nota_1_aluno_2, nota_2_aluno_2, peso_nota_1, peso_nota_2));
+
+
+    </script>
+    
+</body>
+</html>
