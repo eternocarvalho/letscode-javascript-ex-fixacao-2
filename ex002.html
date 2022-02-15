@@ -12,7 +12,7 @@
 
 
         // 1 - Média e Produto
-        alert("Exercício 1")
+       alert("Exercício 1");
 
         let x = parseInt(prompt("Insira um número inteiro"));
         let y = parseInt(prompt("Insira um número inteiro"));
@@ -28,6 +28,7 @@
         console.log(calcula_produto(x,y));
 
         // 2 - Média Ponderada
+        alert("Exercício 2");
         let peso_prova_1 = parseInt(prompt("Insira o peso da primeira prova"));
         let peso_prova_2 = parseInt(prompt("Insira o peso da segunda prova"));
         let matricula_aluno = parseInt(prompt("Insira a matrícula do aluno"));
@@ -41,6 +42,7 @@
         console.log (calcula_media_ponderada (nota_prova_1, nota_prova_2, peso_prova_1, peso_prova_2));
 
         // 3 - Média Ponderada
+        alert("Exercício 3");
         let peso_1 = parseInt(prompt("Insira o peso da primeira prova"));
         let peso_2 = parseInt(prompt("Insira o peso da segunda prova"));
         let matricula_do_aluno = parseInt(prompt("Insira a matrícula do aluno"));
@@ -54,9 +56,10 @@
 
 
         // 4 - Média Ponderada 2 Alunos
+        alert("Exercício 4");
         let peso_nota_1 = parseInt(prompt("Insira o peso da primeira prova"));
         let peso_nota_2 = parseInt(prompt("Insira o peso da segunda prova"));
-        let matricula_aluno_1 = parseInt(prompt("Insira a matrícula do aluno"));
+        let matricula_aluno_1 = parseInt(prompt("Insira a matrícula do aluno 1"));
         let nota_1_aluno_1 = parseFloat(prompt("Insira a nota da primeira prova"));
         let nota_2_aluno_1 = parseFloat(prompt("Insira a nota da segunda prova"));
 
@@ -64,7 +67,7 @@
             return (calcula_produto(nota_1_aluno_1, peso_nota_1) + calcula_produto(nota_2_aluno_1, peso_nota_2)) / (peso_nota_1 + peso_nota_2);
         }
         console.log (calcula_media_ponderada (nota_1_aluno_1, nota_2_aluno_1, peso_nota_1, peso_nota_2));
-
+        let matricula_aluno_2 = parseInt(prompt("Insira a matrícula do aluno 2"));
         let nota_1_aluno_2 = parseFloat(prompt("Insira a nota da primeira prova"));
         let nota_2_aluno_2 = parseFloat(prompt("Insira a nota da segunda prova"));
 
@@ -73,6 +76,42 @@
         }
         console.log (calcula_media_ponderada (nota_1_aluno_2, nota_2_aluno_2, peso_nota_1, peso_nota_2));
 
+        // 5 - Faça um programa que leia um valor real representando o gasto realizado por um cliente de um restaurante e imprima o valor total a ser pago, considerando os 10% do garçom. O seu programa deve, obrigatoriamente, utilizar uma função que receba o valor do gasto e retorne o valor total a ser pago pelo cliente;
+
+        alert("Exercício 5");
+        let gasto_restaurante = parseFloat(prompt("Digite o valor total gasto pelo cliente"));
+        let dez_porcento;
+        function calcula_valor_total (gasto_restaurante, dez_porcento) {
+            return gasto_restaurante + (gasto_restaurante * 0.1);
+        }
+        console.log(calcula_valor_total(gasto_restaurante, dez_porcento));
+
+        /* 6 - Implemente, utilizando funções, um programa que receba do usuário o valor do salário bruto de um funcionário e imprima o valor com descontos de INSS, FGTS e Plano de Saúde. O programa deve utilizar uma função para calcular cada um dos descontos, sendo que estas funções devem receber o valor do salário bruto e retornar o valor a ser descontado. Os valores descontados devem ser:
+        - INSS: 10% do valor bruto;
+        - FGTS: 8%;
+        - Plano de Saúde: R$100,00.*/
+
+        alert("Exercício 4");
+        let salario_bruto = parseFloat(prompt("Insira o valor do salario bruto"));
+        console.log("O salário bruto é", salario_bruto);
+        const aliquota_inss = 0.1;
+        const aliquota_fgts = 0.08;
+        const plano_de_saude = 100;
+
+        function desconto_inss(salario_bruto, aliquota_inss) {
+            return salario_bruto * aliquota_inss;
+        }
+        console.log("O desconto de INSS é", desconto_inss(salario_bruto, aliquota_inss));
+
+        function desconto_fgts(salario_bruto, aliquota_fgts) {
+            return salario_bruto * aliquota_fgts;
+        }
+        console.log("O desconto de FGTS é", desconto_fgts(salario_bruto, aliquota_fgts));
+
+        function salario_liquido (salario_bruto, aliquota_inss, aliquota_fgts, plano_de_saude) {
+            return (salario_bruto - (desconto_inss(salario_bruto, aliquota_inss))) - (desconto_fgts(salario_bruto, aliquota_fgts)) - plano_de_saude;
+            }
+        console.log("O valor do salário com descontos é", salario_liquido(salario_bruto, aliquota_inss, aliquota_fgts, plano_de_saude));
 
     </script>
     
